@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-blue-500 font-semibold tracking-wide uppercase text-sm mb-4">
+          <h2 className="text-blue-500 font-semibold tracking-wide  text-sm mb-4">
             {personalInfo.role}
           </h2>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
           <div className="flex justify-center gap-4">
             <a
               href="#projects"
-              className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-medium transition-all flex items-center gap-2"
+              className="px-8 py-3 bg-white hover:bg-blue-700 text-white rounded-full font-medium transition-all flex items-center gap-2"
             >
               View Projects <ArrowRight className="w-4 h-4" />
             </a>

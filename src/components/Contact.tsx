@@ -25,13 +25,23 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="bg-gray-800 p-8 rounded-2xl border border-gray-700 shadow-xl"
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const name = formData.get('name');
+              const email = formData.get('email');
+              const message = formData.get('message');
+              
+              window.location.href = `mailto:abdullatifkhalid99@gmail.com?subject=Portfolio Contact from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+            }}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2">Name</label>
                   <input
                     type="text"
+                    name="name"
                     id="name"
+                    required
                     className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                     placeholder="John Doe"
                   />
@@ -40,7 +50,9 @@ const Contact: React.FC = () => {
                   <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2">Email</label>
                   <input
                     type="email"
+                    name="email"
                     id="email"
+                    required
                     className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                     placeholder="john@example.com"
                   />
@@ -51,7 +63,9 @@ const Contact: React.FC = () => {
                 <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2">Message</label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
+                  required
                   className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                   placeholder="Tell me about your project..."
                 ></textarea>
@@ -69,7 +83,7 @@ const Contact: React.FC = () => {
             <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-center gap-8 text-gray-400">
               <div className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-blue-500" />
-                <span>email@example.com</span>
+                <span>abdullatifkhalid99@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <MessageSquare className="w-5 h-5 text-blue-500" />
