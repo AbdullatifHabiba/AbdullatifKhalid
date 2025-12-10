@@ -28,6 +28,14 @@ const Projects: React.FC = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group bg-gray-900 rounded-xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all hover:shadow-2xl hover:shadow-blue-500/10"
             >
+              <div className="h-48 overflow-hidden relative">
+                <div className="absolute inset-0 bg-blue-500/10 group-hover:bg-transparent transition-colors z-10"></div>
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
               <div className="p-8">
                 <div className="flex justify-between items-start mb-6">
                   <div className="p-3 bg-blue-500/10 rounded-lg">

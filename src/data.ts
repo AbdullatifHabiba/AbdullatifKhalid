@@ -1,4 +1,11 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
+import gitopsImg from './assets/projects/gitops.png';
+import todoImg from './assets/projects/todo.png';
+import weatherImg from './assets/projects/weather.png';
+import k8sTlsImg from './assets/projects/k8s-tls.png';
+import wordpressImg from './assets/projects/wordpress.png';
+import aiopsImg from './assets/projects/aiops.png';
+
 
 export const navLinks = [
     { name: 'About', href: '#about' },
@@ -50,37 +57,43 @@ export const projects = [
         title: "GitOps Infrastructure Management",
         description: "Implemented GitOps workflow using ArgoCD for declarative Kubernetes deployments. Containerized services using Docker and managed multi-environment configurations through kustomize.",
         tags: ["Kubernetes", "ArgoCD", "Terraform", "GitHub Actions"],
-        link: "https://github.com/AbdullatifHabiba/GitOps-Infrastructure-for-Dependency-Track"
+        link: "https://github.com/AbdullatifHabiba/GitOps-Infrastructure-for-Dependency-Track",
+        image: gitopsImg
     },
     {
         title: "ToDo CI/CD Pipeline Project",
         description: "Developed a complete CI/CD pipeline for a containerized ToDo application using Jenkins and GitHub Actions. Built Docker images and deployed to Kubernetes automatically.",
         tags: ["Docker", "Kubernetes", "GitHub Actions", "Jenkins"],
-        link: "https://github.com/AbdullatifHabiba/ToDo-CICD-Project"
+        link: "https://github.com/AbdullatifHabiba/ToDo-CICD-Project",
+        image: todoImg
     },
     {
         title: "Weather Stations Monitoring System",
         description: "Architected and deployed a real-time monitoring system using Apache Kafka and Elasticsearch. Created a local Kubernetes cluster with automated deployment.",
         tags: ["Kubernetes", "Docker", "Elasticsearch", "Kafka"],
-        link: "https://github.com/AbdullatifHabiba/Weather-Stations_Monitoring"
+        link: "https://github.com/AbdullatifHabiba/Weather-Stations_Monitoring",
+        image: weatherImg
     },
     {
         title: "Kubernetes TLS Project",
         description: "Deploying a production-ready Kubernetes cluster on AWS EKS with automated TLS certificate management using Cert-Manager and Let's Encrypt. Includes Terraform infrastructure provisioning.",
         tags: ["Kubernetes", "AWS EKS", "Terraform", "Cert-Manager", "Let's Encrypt"],
-        link: "https://github.com/AbdullatifHabiba/Kubernetes-TLS-Project"
+        link: "https://github.com/AbdullatifHabiba/Kubernetes-TLS-Project",
+        image: k8sTlsImg
     },
     {
         title: "WordPress on AWS (IaC)",
         description: "Comprehensive Infrastructure as Code (IaC) solution for deploying scalable WordPress applications on AWS using Terraform for provisioning and Ansible for configuration management.",
         tags: ["Terraform", "Ansible", "AWS", "WordPress", "IaC"],
-        link: "https://github.com/AbdullatifHabiba/WordPress-on-AWS---Terraform-Ansible-Infrastructure"
+        link: "https://github.com/AbdullatifHabiba/WordPress-on-AWS---Terraform-Ansible-Infrastructure",
+        image: wordpressImg
     },
     {
         title: "AIOps Self-Monitoring",
         description: "AIOps solution for self-monitoring systems, leveraging machine learning for anomaly detection and automated remediation of infrastructure issues.",
         tags: ["AIOps", "Monitoring", "Machine Learning", "Automation"],
-        link: "https://github.com/AbdullatifHabiba/AiOps-selfMonitoring"
+        link: "https://github.com/AbdullatifHabiba/AiOps-selfMonitoring",
+        image: aiopsImg
     }
 ];
 
