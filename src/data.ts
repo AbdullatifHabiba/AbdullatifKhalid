@@ -94,7 +94,7 @@ export const experience = [
     {
         company: "FortStak",
         role: "DevOps Intern",
-        period: "July 2025 - Present",
+        period: "July 2025 - November 2024",
         description: "Gained hands-on experience with DevOps tools, Agentic AI (MCP, CrewAI), and AWS. Practiced IaC with Terraform and Ansible, and CI/CD implementation."
     },
     {
