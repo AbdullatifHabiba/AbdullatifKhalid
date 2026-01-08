@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Terminal } from 'lucide-react';
+import { Menu, X, Terminal, BookOpen } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { navLinks } from '../data';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isRoadmapPage = location.pathname === '/devops-roadmap';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,7 +32,7 @@ const Header: React.FC = () => {
           
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              {navLinks.map((link) => (
+              {!isRoadmapPage && navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
@@ -38,6 +41,13 @@ const Header: React.FC = () => {
                   {link.name}
                 </a>
               ))}
+              <Link
+                to={isRoadmapPage ? '/' : '/devops-roadmap'}
+                className="flex items-center gap-2 text-gray-300 hover:text-white bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 px-3 py-2 rounded-md text-sm font-medium transition-all"
+              >
+                <BookOpen className="w-4 h-4" />
+                {isRoadmapPage ? 'Portfolio' : 'DevOps Roadmap'}
+              </Link>
             </div>
           </div>
           
@@ -56,7 +66,7 @@ const Header: React.FC = () => {
       {isOpen && (
         <div className="md:hidden bg-gray-900 shadow-xl">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
+            {!isRoadmapPage && navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
@@ -66,6 +76,14 @@ const Header: React.FC = () => {
                 {link.name}
               </a>
             ))}
+            <Link
+              to={isRoadmapPage ? '/' : '/devops-roadmap'}
+              onClick={() => setIsOpen(false)}
+              className="flex items-center gap-2 text-gray-300 hover:text-white bg-blue-500/20 hover:bg-blue-500/30 border border-blue-500/50 px-3 py-2 rounded-md text-base font-medium"
+            >
+              <BookOpen className="w-4 h-4" />
+              {isRoadmapPage ? 'Portfolio' : 'DevOps Roadmap'}
+            </Link>
           </div>
         </div>
       )}

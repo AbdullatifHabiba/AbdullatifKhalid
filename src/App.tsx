@@ -1,20 +1,16 @@
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Hero from './components/Hero';
-import About from './components/About';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import DevOpsRoadmap from './pages/DevOpsRoadmap';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </Layout>
+    <Router basename="/AbdullatifKhalid">
+      <Routes>
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/devops-roadmap" element={<DevOpsRoadmap />} />
+      </Routes>
+    </Router>
   );
 }
 

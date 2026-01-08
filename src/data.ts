@@ -5,6 +5,8 @@ import weatherImg from './assets/projects/weather.png';
 import k8sTlsImg from './assets/projects/k8s-tls.png';
 import wordpressImg from './assets/projects/wordpress.png';
 import aiopsImg from './assets/projects/aiops.png';
+import gifConverterImg from './assets/projects/gif-converter.png';
+import deltasouqImg from './assets/projects/deltasouq.png';
 
 
 export const navLinks = [
@@ -94,6 +96,20 @@ export const projects = [
         tags: ["AIOps", "Monitoring", "Machine Learning", "Automation"],
         link: "https://github.com/AbdullatifHabiba/AiOps-selfMonitoring",
         image: aiopsImg
+    },
+    {
+        title: "GIF Converter (Awees Converter)",
+        description: "Modern web application for converting videos to GIF format. Features a clean, user-friendly interface with drag-and-drop upload, real-time conversion progress, and instant downloads.",
+        tags: ["React", "Video Processing", "Web App", "Vercel"],
+        link: "https://gif-converter.vercel.app/",
+        image: gifConverterImg
+    },
+    {
+        title: "DeltaSouq - AgriFreelance Hub",
+        description: "Arabic agricultural freelance marketplace platform connecting farmers and agricultural companies with specialized freelance experts. Features RTL design, freelancer profiles, and service listings.",
+        tags: ["React", "Arabic", "Marketplace", "Agriculture", "Vercel"],
+        link: "https://aragri-freelance-hub-builder.vercel.app/",
+        image: deltasouqImg
     }
 ];
 
@@ -107,7 +123,7 @@ export const experience = [
     {
         company: "FortStak",
         role: "DevOps Intern",
-        period: "July 2025 - November 2024",
+        period: "July 2025 - Nov 2024",
         description: "Gained hands-on experience with DevOps tools, Agentic AI (MCP, CrewAI), and AWS. Practiced IaC with Terraform and Ansible, and CI/CD implementation."
     },
     {
