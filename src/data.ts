@@ -116,20 +116,20 @@ export const projects = [
 export const experience = [
     {
         company: "Obelion.ai",
+        role: "DevOps Engineer",
+        period: "Jan 2026 - Present",
+        description: "Spearheaded multi-cloud infrastructure automation across AWS, GCP, Azure, Oracle, and Alibaba Cloud. Engineered CI/CD pipelines for Kubernetes workload migration and orchestrated cross-cloud virtual machine (VM) migrations with minimal downtime."
+    },
+    {
+        company: "Obelion.ai",
         role: "Software Engineer",
-        period: "Nov 2024 - Present",
+        period: "Nov 2024 - Jan 2026",
         description: "Developed full-stack web applications using Next.js. Applied software engineering best practices and collaborated on cloud computing solutions."
     },
     {
         company: "FortStak",
         role: "DevOps Intern",
-        period: "July 2025 - Nov 2024",
+        period: "July 2024 - Nov 2024",
         description: "Gained hands-on experience with DevOps tools, Agentic AI (MCP, CrewAI), and AWS. Practiced IaC with Terraform and Ansible, and CI/CD implementation."
-    },
-    {
-        company: "Udacity, MCIT",
-        role: "Cloud Developer Nanodegree",
-        period: "July 2022 - Sep 2022",
-        description: "Mastered AWS Cloud Services, Docker, and Kubernetes. Implemented CI/CD pipelines and designed cloud-native applications."
     }
 ];
